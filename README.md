@@ -1,1 +1,7 @@
 # Turing_Machine
+
+-	 la început includ funcţia getline, deoarece am lucrat în CodeBlocks, pe Windows şi nu o avea deja implementată(e o funcţie POSIX);
+-	Citesc linie cu linie cu linie din fişier, stochez în variabila N numărul de stări, apoi într-un vector stariInitiale toate stările. De pe a doua linie citesc numărul M de stări finale şi în vectorul stariFinale, starile efectiv.  De pe a treia linie citesc starea iniţială în variabila stareCurentă. De pe a 4-a linie citesc numărul de tranziţii disponibile ale maşinii, urmând ca fiecare simbol să fie pus în vector-ul corespunzător pe poziţia i, i indexând de la 0. De asemenea, citesc şi banda in sirul codBanda din fişierul tape.in şi o completez cu diez până la 1000; 
+-	Pentru toate matricile de mai sus, aloc memorie(înainte să stochez date în ele);
+-	Parcurgerea efectivă începe din stareaCurentă, dacă găsesc în vectorul stariTranzitii starea iniţială, mă opresc şi încep să caut locul unde simbol-ul de pe bandă corespunde cu simbolul tranziţiei şi fac asta cât timp stareaCurentă şi stareTranzitie sunt egale. Dacă am găsit o tranziţie care se potriveşte, actualizez stareaCurentă la stareFinTranzitii[j], înlocuiesc simbolul şi trec mai departe. 
+-	Fac ceea ce am prezentat mai sus până: 1. Ori ajunge într-o stare finală şi se opreşte, printând în fişier codBanda; 2. Nu găseşte o tranziţie care sa se potrivească şi atunci scrie în fişier că Se agata.
